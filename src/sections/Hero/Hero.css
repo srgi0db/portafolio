@@ -1,0 +1,201 @@
+/* ==========================================================================
+   Contenedor Principal
+   ========================================================================== */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 40px 0;
+  background: radial-gradient(
+    135deg,
+    var(--hero-bg-start) 0%,
+    var(--hero-bg-end) 100%
+  );
+}
+
+/* Gif back */
+.hero-aura {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  filter: brightness(0.55) contrast(2.5) saturate(15);
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--hero-overlay-start) 0%,
+    var(--hero-overlay-end) 100%
+  );
+
+  z-index: 1;
+}
+
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+@media (max-width: 990px) {
+  .hero-row {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 60px;
+  }
+}
+
+/* ==========================================================================
+   Textos y Contenido
+   ========================================================================== */
+/* Glassmorphism*/
+.hero-content {
+  flex: 0 0 600px;
+  max-width: 620px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 20px;
+  box-shadow: var(--shadow-ambient);
+}
+
+@media (max-width: 991px) {
+  .hero-content {
+    flex: 0 0 300px;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-subtitle::after {
+    animation: none;
+  }
+}
+
+.hero-content h1 {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.hero-content h1 .highlight {
+  color: var(--mist-400);
+  color: var(--primary);
+  display: inline-block;
+}
+
+.hero-description {
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  margin-top: 22px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 50ch;
+}
+
+@media (max-width: 991px) {
+  .hero-description {
+    max-width: none;
+  }
+}
+
+/* ==========================================================================
+   Botones
+   ========================================================================== */
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+@media (max-width: 991px) {
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   Imagen hero
+   ========================================================================== */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.image-wrapper {
+  width: 520px;
+  height: 520px;
+}
+
+@media (max-width: 480px) {
+  .image-wrapper {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 105%;
+  object-fit: cover;
+}
+
+/* Efecto del | */
+
+.highlight {
+  display: inline-flex;
+  align-items: center;
+  background-clip: text;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 0px;
+  animation: blinkCursor 0.8s infinite;
+}
+
+@keyframes blinkCursor {
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}

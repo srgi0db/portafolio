@@ -1,0 +1,169 @@
+/* ========================================================================== */
+/* Tech Stack */
+/* ========================================================================== */
+
+.tech-stack {
+  position: relative;
+  padding: 5rem 0;
+  overflow: hidden;
+}
+
+.tech-stack::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(82, 118, 255, 0.12),
+    transparent 55%
+  );
+  pointer-events: none;
+}
+
+/* ================= Header ================= */
+
+.slider-header {
+  max-width: 720px;
+  margin: 0 auto 4rem;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.slider-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+
+  border-radius: 999px;
+
+  background: rgba(82, 118, 255, 0.12);
+  border: 1px solid rgba(82, 118, 255, 0.25);
+
+  color: #7ea6ff;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.slider-header h2 {
+  margin: 1.3rem 0 1rem;
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text-primary);
+}
+
+.slider-header p {
+  max-width: 600px;
+  margin: auto;
+
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* ================= Slider ================= */
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+/* Fade lateral */
+
+.slider::before,
+.slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 180px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.slider::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg), transparent);
+}
+
+.slider::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg), transparent);
+}
+
+/* Track */
+
+.slide-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.slide-track:hover {
+  animation-play-state: paused;
+}
+
+/* Card */
+
+.slide {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  min-width: 180px;
+  padding: 1rem 1.4rem;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(12px);
+
+  transition: 0.35s;
+}
+
+.slide:hover {
+  transform: translateY(-8px);
+  border-color: var(--violet-800);
+  box-shadow: var(--shadow-primary);
+}
+
+/* Icon */
+
+.slide svg {
+  font-size: 2rem;
+  transition: 0.35s;
+}
+
+.slide:hover svg {
+  transform: scale(1.15);
+}
+
+/* Text */
+
+.slide span {
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: 0.35s;
+}
+
+.slide:hover span {
+  color: var(--text-primary);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}

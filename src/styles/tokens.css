@@ -1,0 +1,103 @@
+:root {
+  /* ===========================
+      BACKGROUND
+  ============================ */
+  --bg-void: #08070f;
+  --bg-primary: #0f0d1a;
+  --bg-secondary: #16132a;
+  --bg-tertiary: #241d47;
+
+  --bg-card: rgba(255, 255, 255, 0.06);
+  --bg-card-hover: rgba(255, 255, 255, 0.1);
+
+  --bg-navbar: rgba(15, 13, 26, 0.75);
+  --bg-overlay: rgba(8, 7, 15, 0.4);
+
+  /* Glassmorphism */
+  --bg-glass: rgba(255, 255, 255, 0.06);
+  --bg-glass-hover: rgba(255, 255, 255, 0.11);
+  --glass-background: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.14);
+
+  /* ===========================
+    Primary color
+  ============================ */
+  --violet-50: #e0f0ff;
+  --violet-100: #bfe0ff;
+  --violet-200: #90cfff;
+  --violet-300: #60b0ff;
+  --violet-400: #4080f7;
+  --violet-500: #3070e0;
+  --violet-600: #245bbd;
+  --violet-700: #1a4a9a;
+  --violet-800: #103877;
+
+  --primary: var(--violet-500);
+  --primary-light: var(--violet-300);
+  --primary-dark: var(--violet-700);
+  --primary-pale: var(--violet-200);
+  --primary-rgb: 124, 58, 237;
+
+  /* ===========================
+    Accents
+  =========================== */
+  --accent: #90cfff;
+  --accent-light: #4080f7;
+  --accent-dark: #1a4a9a;
+  --accent-rgb: 45, 212, 224;
+
+  --secondary: #2a2450;
+
+  /* ===========================
+      TEXT
+  ============================ */
+  --text-primary: #f5f3fa;
+  --text-secondary: rgba(245, 243, 250, 0.85);
+  --text-muted: rgba(245, 243, 250, 0.65);
+  --text-accent: #b8a9d9;
+
+  /* ===========================
+      BORDERS
+  ============================ */
+  --border: rgba(255, 255, 255, 0.14);
+  --border-soft: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(var(--primary-rgb), 0.5);
+
+  /* ===========================
+      SHADOWS
+  ============================ */
+  --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 15px 35px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 25px 70px rgba(8, 7, 15, 0.55);
+  --shadow-primary: 0 3px rgba(var(--primary-rgb), 0.5);
+  --shadow-ambient: 0 25px 70px rgba(8, 7, 15, 0.55);
+
+  /* ===========================
+      FONTS
+  ============================ */
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* ===========================
+      RADIUS
+  ============================ */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  /* ===========================
+      TRANSITIONS
+  ============================ */
+  --transition: 0.3s ease;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ===========================
+      HERO
+  ============================ */
+  --hero-bg-start: rgb(22, 19, 42);
+  --hero-bg-end: rgb(55, 30, 130);
+  --hero-overlay-start: rgba(60, 47, 99, 0.4);
+  --hero-overlay-end: rgba(30, 13, 90, 0.9);
+}
