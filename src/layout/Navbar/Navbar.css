@@ -20,7 +20,7 @@
   width: min(90%, 1200px);
   height: 65px;
   border-radius: var(--radius-pill);
-  background: rgba(17, 16, 31, 0.75);
+  background: var(--glass-background);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--border-soft);
@@ -55,15 +55,10 @@
 }
 
 /* LOGO */
-.logo {
-  text-decoration: none;
-  font-size: 1.6rem;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.logo span {
-  font-family: var(--font-mono);
+.logo-img {
+  width: 40px;
+  height: auto;
+  border-radius: 7px;
 }
 
 /* MENU */

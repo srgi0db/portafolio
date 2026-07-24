@@ -23,9 +23,7 @@ const Navbar = () => {
     <header className={scrolled ? "navbar slidedown" : "navbar"}>
       <div className="container">
         <div className="navbar-content">
-          <a className="logo" href="#home">
-            Sergio<span>.</span>
-          </a>
+          <img src="/favicon.png" alt="Logo" className="logo-img" />
 
           <nav className="nav-menu">
             <ul className="nav-list">
