@@ -6,10 +6,14 @@ import Slide from "../sections/Slide/Slide";
 import Form from "../layout/Form/Form";
 import Project from "../sections/Project/Project";
 
-export default function Home() {
+interface HomeProps {
+  AuraHero?: string;
+}
+
+export default function Home({AuraHero}: HomeProps) {
   return (
     <>
-      <Hero />
+      <Hero auraHero={AuraHero} />
       <Navbar />
       <Slide />
       <About />

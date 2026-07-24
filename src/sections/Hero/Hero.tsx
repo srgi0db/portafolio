@@ -1,13 +1,16 @@
 import "./Hero.css";
-import AuraHero from "../../assets/images/Aura-hero.gif";
 import DogHero from "../../assets/images/Dog-hero.png";
 import Button from "../../components/Button/Button";
 import HeroTyping from "./Functions/HeroTyping";
 
-const Hero = () => {
+interface HeroProps {
+  auraHero?: string;
+}
+
+const Hero: React.FC<HeroProps> = ({ auraHero }) => {
   return (
     <section className="hero" id="inicio">
-      <img src={AuraHero} alt="" className="hero-aura" />
+      {auraHero && <img src={auraHero} alt="" className="hero-aura" />}
       <div className="hero-overlay"></div>
 
       <div className="container">

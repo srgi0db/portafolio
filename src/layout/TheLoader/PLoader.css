@@ -1,0 +1,49 @@
+/* Preloader - precarga */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-void);
+  animation: fadeOut 0.4s ease 0s forwards paused;
+}
+
+.preloader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.preloader-logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.preloader-logo span {
+  font-family: var(--font-mono);
+  color: var(--primary-light);
+}
+
+.preloader-bar-track {
+  width: 220px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-card);
+  overflow: hidden;
+}
+
+.preloader-bar-fill {
+  height: 100%;
+  background: var(--primary);
+  transition: width 0.15s ease-out;
+}
+
+.preloader-percent {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  color: var(--text-muted);
+}
