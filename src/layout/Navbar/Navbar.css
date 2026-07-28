@@ -21,8 +21,8 @@
   height: 65px;
   border-radius: var(--radius-pill);
   background: var(--glass-background);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-soft);
   box-shadow: var(--shadow-ambient);
   animation: slidedown 0.4s var(--ease-out) forwards;
