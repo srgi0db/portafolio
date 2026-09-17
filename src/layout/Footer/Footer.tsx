@@ -22,7 +22,7 @@ const Footer = () => {
               <span>.</span>
             </h3>
 
-            <p>Frontend Developer creando experiencias web modernas.</p>
+            <p>FullStack Developer creando software moderno.</p>
           </div>
 
           <div className="footer-links">
@@ -41,7 +41,7 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <p>
-            © {new Date().getFullYear()} Sergio. Todos los derechos reservados.
+            © {new Date().getFullYear()} Sergio Abad. Todos los derechos reservados.
           </p>
         </div>
       </div>
