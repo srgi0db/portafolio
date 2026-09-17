@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-brand">
             <h3>
-              Sergio
+              Sergio Abad
               <span>.</span>
             </h3>
 
